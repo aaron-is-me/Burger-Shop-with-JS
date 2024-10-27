@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "name": "BBQ Bacon Burger",
+    "price": 12,
+    "image": "./burger/BBQ Bacon Burger.png"
+  },
+  {
+    "id": 2,
+    "name": "Black Bean Burger",
+    "price": 12,
+    "image": "./burger/Black Bean Burger.png"
+  },
+  {
+    "id": 3,
+    "name": "Ckassuc Cheese Burger",
+    "price": 10,
+    "image": "./burger/Classic Cheeseburger.png"
+  },
+  {
+    "id": 4,
+    "name": "Italian Burger",
+    "price": 14,
+    "image": "./burger/Italian Burger.png"
+  },
+  {
+    "id": 5,
+    "name": "KFC Chicken Burger",
+    "price": 14,
+    "image": "./burger/KFC Chicken Burger.png"
+  },
+  {
+    "id": 6,
+    "name": "Mushroom Swiss Burger",
+    "price": 20,
+    "image": "./burger/Mushroom Swiss Burger.png"
+  },
+  {
+    "id": 7,
+    "name": "Squid Ink Burger",
+    "price": 25,
+    "image": "./burger/Squid Ink Burger.png"
+  },
+  {
+    "id": 8,
+    "name": "Apple Pizza",
+    "price": 15,
+    "image": "./pizza/Apple Pizza.png"
+  },
+  {
+    "id": 9,
+    "name": "BBQ Chicken Pizza",
+    "price": 14,
+    "image": "./pizza/BBQ Chicken Pizza.png"
+  },
+  {
+    "id": 10,
+    "name": "Classic Italian Pizza",
+    "price": 20,
+    "image": "./pizza/Classic_Italian_pizza.png"
+  },
+  {
+    "id": 11,
+    "name": "Pesto Pizza",
+    "price": 24,
+    "image": "./pizza/Pesto Pizza.png"
+  },
+  {
+    "id": 12,
+    "name": "Smoked Meaked Pizza",
+    "price": 24,
+    "image": "./pizza/Smoked Meat Pizza.png"
+  }
+
+  ,
+  {
+    "id": 13,
+    "name": "Cafe Latte Starbucks",
+    "price": 14,
+    "image": "./drink/caffe latte starbucks.png"
+  }
+
+  ,
+  {
+    "id": 14,
+    "name": "Cookie Butter Latte",
+    "price": 18,
+    "image": "./drink/Cookie Butter Latte.png"
+  }
+
+  ,
+  {
+    "id": 15,
+    "name": "Frappuccino Starbuck",
+    "price": 20,
+    "image": "./drink/Frappuccino Starbuck.png"
+  }
+
+  ,
+  {
+    "id": 16,
+    "name": "Iced Tea Varieties",
+    "price": 20,
+    "image": "./drink/Iced Tea Varieties.png"
+  },
+  {
+    "id": 17,
+    "name": "Strawberry Fappuccino Starbuck",
+    "price": 24,
+    "image": "./drink/Strawberry Fappuccino Starbuck.png"
+  }
+
+  ,
+  {
+    "id": 18,
+    "name": "Strawberry Refreshers Starbucks",
+    "price": 20,
+    "image": "./drink/Strawberry Refreshers Starbucks.png"
+  }
+
+  ,
+  {
+    "id": 19,
+    "name": "Waltermelon Lemonade",
+    "price": 24,
+    "image": "./drink/waltermelon Lemonade.png"
+  }
+
+  ,
+  {
+    "id": 20,
+    "name": "ICE",
+    "price": 2,
+    "image": "./drink/ice.png"
+  }
+
+  
+]

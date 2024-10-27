@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+    <title>Billing Details Form</title>
+</head>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+.billing-container,
+.checkout-container {
+    width: 500px;
+    background-color: #fff; /* White background */
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft gray shadow */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333; /* Dark gray text */
+}
+
+.back-to-cart {
+    font-size: 14px;
+    text-decoration: none;
+    color: #555; /* Medium gray text */
+}
+
+.billing-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Group */
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.input-group,
+.inputs {
+    position: relative;
+    width: 100%;
+}
+
+.input-group label,
+.inputs label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    padding: 0 5px;
+    transition: 0.2s;
+    font-size: 14px;
+    color: #aaa; /* Light gray text */
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label,
+.inputs input:focus~label,
+.inputs input:valid~label {
+    top: 0;
+    background: #fff;
+    color: #333; /* Dark gray text */
+}
+
+.billing-form input,
+.inputs input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 3px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: #fff; /* White background */
+    color: #333; /* Dark gray text */
+    outline: none;
+}
+
+/* Checkout Section */
+.order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.product-name {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 5px;
+    color: #333; /* Dark gray text */
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 5px;
+    color: #333; /* Dark gray text */
+}
+
+.quantity {
+    font-size: 14px;
+    color: #777; /* Medium gray text */
+}
+
+.summary {
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.summary-line,
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    border-top: 1px solid #ddd; /* Light gray border */
+}
+
+.total-line {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333; /* Dark gray text */
+}
+
+.payment-options {
+    border: 1px solid #ccc; /* Light gray border */
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    align-items: center;
+    margin-bottom: 20px;
+    color: #333; /* Dark gray text */
+}
+
+.payment-option input {
+    margin-right: 10px;
+}
+
+.description {
+    display: block;
+    font-size: 12px;
+    color: #777; /* Medium gray text */
+    margin: 10px 0 15px 0;
+}
+
+.dinger-logo {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.privacy-policy,
+.terms {
+    font-size: 12px;
+    color: #777; /* Medium gray text */
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.terms input {
+    margin-right: 10px;
+}
+
+.upload-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="file"] {
+            display: block;
+            margin: 10px 0;
+        }
+
+a {
+    text-decoration: none;
+    color: #555; /* Medium gray text */
+}
+
+.place-order-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #555; /* Medium gray background */
+    color: #fff; /* White text */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.place-order-button:hover {
+    background-color: #333; /* Dark gray background */
+}
+
+/* From Uiverse.io by JaydipPrajapati1910 */ 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #181717;
+  outline: 3px #181717 solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+  height: 50px;
+  margin-left: 200px;
+}
+
+.button .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.button svg path {
+  transition: 400ms;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+.button:hover .text {
+  color: #181717;
+}
+
+.button:hover svg path {
+  fill: #181717;
+}
+
+</style>
+<body>
+
+    
+<div class="billing-container">
+    <div class="header">
+        <h2>Billing details</h2>
+        <a href="index.html" class="back-to-cart">← Back to Home</a>
+    </div>
+    <form class="billing-form">
+        <div class="form-row">
+            <div class="input-group">
+                <input type="text" required>
+                <label for="">First name *</label>
+            </div>
+        
+            <div class="input-group">
+                <input type="text" required>
+                <label for="">Last name *</label>
+            </div>
+        </div>
+     
+       
+        <div class="inputs">
+            <input type="text" required>
+            <label for="">Street address *</label>
+        </div>
+
+        <div class="inputs">
+            <input type="text" required>
+            <label for="">Apartment, suite, unit, etc.</label>
+        </div>
+
+        <div class="inputs">
+            <input type="text" required>
+            <label for="">State *</label>
+        </div>
+        
+        <div class="inputs">
+            <input type="email" required>
+            <label for="">Email address</label>
+        </div>
+        
+        <div class="inputs">
+            <input type="text" required>
+            <label for="">Account number</label>
+        </div>
+        
+        <div class="inputs">
+            <input type="text" required>
+            <label for="">Phone</label>
+        </div>
+    </form>
+</div>
+
+<!--------------------------------Checkout--------------------------------------------->
+<div class="checkout-container">
+    <div class="order-item">
+  
+        <div class="item-details">
+           
+    
+        </div>
+    </div>
+
+    <div class="summary">
+        <div class="summary-line">
+            <p>SUBTOTAL</p>
+            <p>$ 000</p>
+        </div>
+       
+        <div class="total-line">
+            <p>ITEM RECEIVE </p>
+            <p>$ 000</p>
+        </div>
+    </div>
+
+    <div class="payment-options">
+        <label class="payment-option">
+            <input type="radio" name="payment-method" value="cod" checked>
+            Cash on delivery
+            <span class="description">Pay with cash upon delivery.</span>
+        </label>
+        
+        Banking
+        <div class="payment-options">
+            <label>
+              <input type="radio" name="payment-method" value="kpay">
+              <img src="kpay-removebg-preview (1).png" width="50px" alt="KPay">
+              <span>KPay</span>
+            </label>
+          
+            <label>
+              <input type="radio" name="payment-method" value="pay">
+              <img src="pay.png" width="80px" alt="Pay">
+              <span>Pay</span>
+            </label>
+          
+            <label>
+              <input type="radio" name="payment-method" value="visa">
+              <img src="visa-removebg-preview.png" width="60px" alt="Visa">
+              <span>Visa</span>
+            </label>
+          </div>
+          <form action="/upload" method="post" enctype="multipart/form-data"></form>
+            <label for="image">Choose an payment screenshot:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+
+        </form>
+        </label>
+    </div>
+    <button class="button">
+        <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+         <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
+         <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+       </svg>
+         <p class="text">Buy Now</p>
+       </button>
+    </div>
+
+    <script src="check.js"></script>
+    </body>
+    </html>

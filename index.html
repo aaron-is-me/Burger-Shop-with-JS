@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BurgerBuzz - Supper delicious Burger in town!</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://kit.fontawesome.com/6060aecd04.js" crossorigin="anonymous"></script>
+
+  <!-- 
+    - google font link
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet"> -->
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png" media="min-width(768px)">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-bg.png" media="min-width(768px)">
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="#" class="logo">BurgerBuzz<span class="span">.</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="nav-item">
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#about" class="navbar-link" data-nav-link>Menu</a>
+            <div class="dropdown-content">
+              <a href="#food-menu">Popular Dishes</a>
+              <a href="addtocard.html">Burger and Meals</a>
+             
+            </div>
+          </li>
+          
+
+          <li class="nav-item">
+            <a href="#review" class="navbar-link" data-nav-link>Review</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#footer" class="navbar-link" data-nav-link>Contact Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="navbar-link" data-nav-link> <span style="font-size: 15px;"> <i class="fa fa-basket-shopping"></i> </span></a>
+          </li>
+
+        </ul>
+      </nav>
+
+     
+       
+      
+          <div class="icon-cart">
+         
+            <span>0</span>
+          </div>
+       
+
+      <div class="header-btn-group">
+        <button class="search-btn" aria-label="Search" data-search-btn>
+          <ion-icon name="search-outline" style="color: red;"></ion-icon>
+        </button>
+
+        <a href="login.html"><button class="btn btn-hover">Login</button></a>
+
+        <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+          <span class="line top"></span>
+          <span class="line middle"></span>
+          <span class="line bottom"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <div class="cartTab">
+    <div class="cartTabHeader">
+      <h1>Shopping Cart</h1>
+      <span class="removeItem">x</span>
+    </div>
+    <div class="listCart">
+      <div class="item">
+        <div class="image">
+          <img src="image/1.png" alt="Product Image" />
+        </div>
+        <div class="name">NAME</div>
+        <div class="totalPrice">Price</div>
+        <div class="quantity">
+          <span class="minus"> &lt; </span>
+          <span>1</span>
+          <span class="plus"> &gt; </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="totalamount">
+      <p id="totalAmount">The total amount is  $0.00</p>
+    </div>
+    <div class="bottom">
+      <button class="close">CLOSE</button>
+      <a href="check.html"> <button class="checkOut">Check Out</button> </a>
+    </div>
+  </div>
+
+
+  <!-- 
+    - #SEARCH BOX
+  -->
+
+  <div class="search-container" data-search-container>
+
+    <div class="search-box">
+      <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..."
+        class="search-input">
+
+      <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
+    </div>
+
+    <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
+
+  </div>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home" style=" height: 820px; background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Hungry? We've Got You Covered!</p>
+
+            <h2 class=" hero-title">Discover Burger Perfection at <span style="color: darkorange;"> BurgerBuzz</span></h2>
+
+           
+
+            <a href="#footer" class="book">Book A Table</a>
+
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./assets/images/hero-banner-bg.png" width="820" height="716" alt="" aria-hidden="true"
+              class="w-100 hero-img-bg">
+
+            <img src="./assets/images/hero-banner.png" width="700" height="637" loading="lazy" alt="Burger"
+              class="w-100 hero-img">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #PROMO
+      -->
+
+      <section class="section section-divider white promo">
+        <div class="container">
+          <h1 class="craving"> Craving Special Dishes? We’ve Got You Covered!</h1>
+          <ul class="promo-list has-scrollbar">
+
+            <li class="promo-item">
+              <div class="promo-card">
+
+
+                <h3 class="h3 card-title">Maxican Pizza</h3>
+
+                <p class="card-text">
+                  Food is any substance consumed to provide nutritional support for an organism.
+                </p>
+
+                <img src="./assets/images/promo-1.png" width="300" height="300" loading="lazy" alt="Maxican Pizza"
+                  class="w-100 card-banner">
+
+              </div>
+            </li>
+
+            <li class="promo-item">
+              <div class="promo-card">
+
+                <h3 class="h3 card-title">Soft Drinks</h3>
+
+                <p class="card-text">
+                  Food is any substance consumed to provide nutritional support for an organism.
+                </p>
+
+                <img src="./assets/images/promo-2.png" width="300" height="300" loading="lazy" alt="Soft Drinks"
+                  class="w-100 card-banner">
+
+              </div>
+            </li>
+
+            <li class="promo-item">
+              <div class="promo-card">
+
+    
+                  
+              
+
+                <h3 class="h3 card-title">French Fry</h3>
+
+                <p class="card-text">
+                  Food is any substance consumed to provide nutritional support for an organism.
+                </p>
+
+                <img src="./assets/images/promo-3.png" width="300" height="300" loading="lazy" alt="French Fry"
+                  class="w-100 card-banner">
+
+              </div>
+            </li>
+
+            <li class="promo-item">
+              <div class="promo-card">
+
+                <h3 class="h3 card-title">Burger Kingo</h3>
+
+                <p class="card-text">
+                  Food is any substance consumed to provide nutritional support for an organism.
+                </p>
+
+                <img src="./assets/images/promo-4.png" width="300" height="300" loading="lazy" alt="Burger Kingo"
+                  class="w-100 card-banner">
+
+              </div>
+            </li>
+
+            <li class="promo-item">
+              <div class="promo-card">
+
+                
+
+                <h3 class="h3 card-title">Chicken Masala</h3>
+
+                <p class="card-text">
+                  Food is any substance consumed to provide nutritional support for an organism.
+                </p>
+
+                <img src="./assets/images/promo-5.png" width="300" height="300" loading="lazy" alt="Chicken Masala"
+                  class="w-100 card-banner">
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+
+      <!-- 
+        - #FOOD MENU
+      -->
+
+      <section class="section food-menu" id="food-menu">
+        <div class="container">
+
+          <p class="section-subtitle">Popular Dishes</p>
+
+          <h2 class="h2 section-title">
+            Our Delicious <span class="span">Foods</span>
+          </h2>
+
+          <p class="section-text">
+            Food is any substance consumed to provide nutritional support for an organism.
+          </p>
+
+          
+          <ul class="food-menu-list">
+
+            <li>
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-1.png" width="300" height="300" loading="lazy"
+                    alt="Fried Chicken Unlimited" class="w-100">
+
+                  <div class="badge">-15%</div>
+
+                  <span onclick="window.location.href='addtocart.html';">
+                    <button class="btn food-menu-btn">Buy Now</button>
+                  </span>
+                  
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Chicken</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">Fried Chicken Unlimited</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price">$49.00</data>
+
+                  <del class="del" value="69.00">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-2.png" width="300" height="300" loading="lazy"
+                    alt="Burger King Whopper" class="w-100">
+
+                  <div class="badge">-10%</div>
+
+                  <span onclick="window.location.href='addtocart.html';">
+                    <button class="btn food-menu-btn">Buy Now</button>
+                  </span>
+                  
+
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Noddles</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">Burger King Whopper</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="29.00">$29.00</data>
+
+                  <del class="del">$39.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-3.png" width="300" height="300" loading="lazy"
+                    alt="White Castle Pizzas" class="w-100">
+
+                  <div class="badge">-25%</div>
+                  <span onclick="window.location.href='addtocart.html';">
+                    <button class="btn food-menu-btn">Buy Now</button>
+                  </span>
+                  
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Pizzas</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">White Castle Pizzas</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-4.png" width="300" height="300" loading="lazy"
+                    alt="Bell Burrito Supreme" class="w-100">
+
+                  <div class="badge">-20%</div>
+                  <span onclick="window.location.href='addtocart.html';">
+                    <button class="btn food-menu-btn">Buy Now</button>
+                  </span>
+                  
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Burrito</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">Bell Burrito Supreme</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="59.00 ">$59.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-5.png" width="300" height="300" loading="lazy"
+                    alt="Kung Pao Chicken BBQ" class="w-100">
+
+                  <div class="badge">-5%</div>
+                  <span onclick="window.location.href='addtocart.html';">
+                    <button class="btn food-menu-btn">Buy Now</button>
+                  </span>
+                  
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Nuggets</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">Kung Pao Chicken BBQ</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-6.png" width="300" height="300" loading="lazy"
+                    alt="Wendy's Chicken" class="w-100">
+
+                  <div class="badge">-15%</div>
+
+                  <span onclick="window.location.href='addtocart.html';">
+                    <button class="btn food-menu-btn">Buy Now</button>
+                  </span>
+                  
+
+
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Chicken</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">Wendy's Chicken</h3>
+
+                <div class="price-wrapper">
+
+                  <p class="price-text">Price:</p>
+
+                  <data class="price" value="49.00">$49.00</data>
+
+                  <del class="del">$69.00</del>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+          <a href="addtocard.html" class="foodadc">More Delicious Food </a>
+          
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="section section-divider white cta" style="background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+
+          <div class="cta-content">
+
+            <h2 class="h2 section-title">
+              The BurgerBuzz Have Excellent Of
+              <span class="span">Quality Burgers!</span>
+            </h2>
+
+            <p class="section-text">
+              BurgerBuzz, established in 2018 at Myanmar Plaza, has continued this tradition with its own unique flair, specializing in burgers, pizza, and fresh juices.
+            </p>
+
+            <button class="btn btn-hover">Buy Now</button>
+          </div>
+
+          <figure class="cta-banner">
+            <img src="./assets/images/cta-banner.png" width="700" height="637" loading="lazy" alt="Burger"
+              class="w-100 cta-img">
+
+            <img src="./assets/images/sale-shape.png" width="216" height="226" loading="lazy"
+              alt="get up to 50% off now" class="abs-img scale-up-anim">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+     
+
+
+
+
+
+      <!-- 
+        - #Review
+      -->
+
+      <section class="section section-divider white testi" id="review">
+        <div class="container">
+
+          
+
+          <h2 class="h2 section-title">
+            Our Customers <span class="span">Reviews</span>
+          </h2>
+
+          <p class="section-text">
+            The food was absolutely delicious, every dish was bursting with flavor!
+          </p>
+
+          <div class="review">
+          <ul class="testi-list has-scrollbar">
+
+            <li class="testi-item">
+              <div class="testi-card">
+
+                <div class="profile-wrapper">
+
+                  <div class="cus1">
+                    <img src="./assets/cus1.jpg" style="width: 280px; height: 200px; margin-left: 15px; margin-top: -20px; border-radius: 7px;">
+                  </div>
+
+               
+
+                </div>
+
+                <blockquote class="testi-text">
+                  "Absolutely the best burger I've had in a long time! The patty was juicy, the toppings were fresh, and the bun was perfectly toasted. It had the ideal balance of flavors—just the right amount of sauce and crunch. I can't wait to come back for another one!"
+                </blockquote>
+
+                <div class="rating-wrapper">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testi-item">
+              <div class="testi-card">
+
+                <div class="profile-wrapper">
+
+                  <div class="cus1">
+                    <img src="./assets/cus3.jpg" style="width: 280px; height: 200px; margin-left: 15px; margin-top: -20px; border-radius: 7px;">
+                  </div>
+
+               
+
+                </div>
+
+                <blockquote class="testi-text">
+                  "I ordered the Bell Burrito Supreme, and it exceeded my expectations. Every component of the dish was cooked to perfection—the meat was tender, the vegetables were fresh, and the seasoning was spot on. The portion size was generous, and the presentation was beautiful. Truly a satisfying and delightful meal!"
+                </blockquote>
+
+                <div class="rating-wrapper">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testi-item">
+              <div class="testi-card">
+
+                <div class="profile-wrapper">
+                  <div class="cus1">
+                    <img src="./assets/cus4.jpg" style="width: 280px; height: 200px; margin-left: 15px; margin-top: -20px; border-radius: 7px;">
+                  </div>
+
+               
+                </div>
+
+                <blockquote class="testi-text">
+                  "The fruit dish was a refreshing treat! A beautiful assortment of fresh, juicy fruits, all perfectly ripe and full of flavor. It was light, sweet, and the perfect way to end my meal. I loved how it was presented with a touch of creativity—definitely a must-try for anyone looking for a healthy dessert option!"
+                </blockquote>
+
+                <div class="rating-wrapper">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+
+              </div>
+        
+
+        </div>
+      </section>
+
+    </div>
+
+
+
+
+      <!-- 
+        - #BANNER
+      -->
+
+      <section class="section section-divider gray banner">
+        <div class="container">
+
+          <ul class="banner-list">
+
+            <li class="banner-item banner-lg">
+              <div class="banner-card">
+
+                <img src="./assets/images/banner-1.jpg" width="550" height="450" loading="lazy"
+                  alt="Discount For Delicious Tasty Burgers!" class="banner-img">
+
+                <div class="banner-item-content">
+                  <p class="banner-subtitle">50% Off Now!</p>
+
+                  <h3 class="banner-title">Discount For Delicious Tasty Burgers!</h3>
+
+                  <p class="banner-text">Sale off 50% only this week</p>
+
+                  <button class="btn">Buy Now</button>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="banner-item banner-sm">
+              <div class="banner-card">
+
+                <img src="./assets/images/banner-2.jpg" width="550" height="465" loading="lazy" alt="Delicious Pizza"
+                  class="banner-img">
+
+                <div class="banner-item-content">
+                  <h3 class="banner-title">Delicious Pizza</h3>
+
+                  <p class="banner-text">50% off Now</p>
+
+                  <button class="btn">Buy Now</button>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="banner-item banner-sm">
+              <div class="banner-card">
+
+                <img src="./assets/images/banner-3.jpg" width="550" height="465" loading="lazy" alt="American Burgers"
+                  class="banner-img">
+
+                <div class="banner-item-content">
+                  <h3 class="banner-title">American Burgers</h3>
+
+                  <p class="banner-text">50% off Now</p>
+
+                  <button class="btn">Buy Now</button>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="banner-item banner-md">
+              <div class="banner-card">
+
+                <img src="./assets/images/banner-4.jpg" width="550" height="220" loading="lazy" alt="Tasty Buzzed Pizza"
+                  class="banner-img">
+
+                <div class="banner-item-content">
+                  <h3 class="banner-title">Tasty Buzzed Pizza</h3>
+
+                  <p class="banner-text">Sale off 50% only this week</p>
+
+                  <button class="btn">Buy Now</button>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer id="footer">
+
+    <div class="footer-top" style="background-image: url('./assets/images/footer-illustration.png')">
+      <div class="container">
+
+        <div class="footer-brand">
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.9779530840556!2d96.15237217485804!3d16.828110318676384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c193dbc054b8b7%3A0x94d068f9508f755c!2z4YCZ4YC84YCU4YC64YCZ4YCs4YCV4YCc4YCs4YCH4YCs!5e1!3m2!1smy!2smm!4v1725727777881!5m2!1smy!2smm" width="200" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact Info</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">+95254017994</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">burgerbuzz@gmail.com</p>
+          </li>
+
+          <li>
+            <address class="footer-list-item">Second Floor, Myanmar Plaza, GaBarAye Pagoda Road, Yangon </address>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Opening Hours</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">Monday-Friday: 08:00-22:00</p>
+          </li>
+
+       
+
+          <li>
+            <p class="footer-list-item">Saturday-Sunday: 07:00-23:00</p>
+          </li>
+
+        </ul>
+
+        <form action="" class="footer-form">
+
+          <p class="footer-list-title">Book a Table</p>
+
+          <div class="input-wrapper">
+
+            <input type="text" name="full_name" required placeholder="Your Name" aria-label="Your Name"
+              class="input-field">
+
+            <input type="email" name="email_address" required placeholder="Email" aria-label="Email"
+              class="input-field">
+
+          </div>
+
+          <div class="input-wrapper">
+
+            <select name="total_person" aria-label="Total person" class="input-field">
+              <option value="person">Person</option>
+              <option value="2 person">2 Person</option>
+              <option value="3 person">3 Person</option>
+              <option value="4 person">4 Person</option>
+              <option value="5 person">5 Person</option>
+            </select>
+
+            <input type="date" name="booking_date"  id="booking_date">
+            
+          </div>
+          
+          
+          <div class="time">
+            <input type="time" name="start_time" id="start_time" class="input-field" required>
+            <input type="time" name="end_time" id="end_time" class="input-field" required>
+          </div>
+          <div class="timetaken">
+            <p id="book_from">Book From: </p>
+            <p id="book_to">To This: </p>
+          </div>
+          <select name="table_type" id="table_type" class="input-field" required>
+            <option value="">Select Table Type</option>
+            <option value="Roof Top">Roof Top Table</option>
+            <option value="Window Table">Window Table</option>
+            <option value="Sunset View Table">Sunset View Table</option>
+            <option value="River View Table">River View Table</option>
+          </select>
+          <button type="submit" class="btn" id="bookBtn">Book a Table</button>
+          
+        </form>
+
+      </div>
+    </div>
+
+  
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+<script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+
+
+</body>
+
+</html>
